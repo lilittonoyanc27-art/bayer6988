@@ -1,0 +1,6 @@
+{
+  "name": "Armenian-Spanish Translation Game",
+  "description": "An interactive Armenian to Spanish translation and learning game styled in a beautiful 3D Greek theme with marble columns, olive branches, and mythological elements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

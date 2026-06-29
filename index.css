@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Custom 3D perspective styles for realistic card flipping */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Greek Meander / Key pattern generator */
+.greek-border-top {
+  background-image: repeating-linear-gradient(90deg, #fbbf24 0px, #fbbf24 2px, transparent 2px, transparent 8px),
+                    repeating-linear-gradient(0deg, #fbbf24 0px, #fbbf24 2px, transparent 2px, transparent 8px);
+}
+
+/* Greek Grid Overlay from the Design specs */
+.greek-pattern-bg {
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05)), 
+                    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05));
+  background-position: 0 0, 40px 40px;
+  background-size: 80px 80px;
+}
+
+/* Drifting clouds horizontal loop */
+@keyframes drift {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100vw); }
+}
+
+.cloud-animate-slow {
+  animation: drift 75s linear infinite;
+}
+
+.cloud-animate-medium {
+  animation: drift 50s linear infinite;
+}
+
+.cloud-animate-fast {
+  animation: drift 35s linear infinite;
+}
+
+/* Olive leaf drifting effect */
+@keyframes leafFall {
+  0% {
+    transform: translateY(-5vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(105vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.leaf-fall {
+  animation: leafFall 12s linear infinite;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.3);
+  border-radius: 4px;
+  border: 1px solid rgba(251, 191, 36, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 191, 36, 0.5);
+}
+
+/* Frosted glass utilities */
+.frosted-panel {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.frosted-panel-thick {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.frosted-panel-yellow {
+  background: rgba(234, 179, 8, 0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 179, 8, 0.25);
+}
+
